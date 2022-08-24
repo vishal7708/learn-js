@@ -99,3 +99,63 @@ pa.textContent = "ME TOO!";
 prac.appendChild(underDiv);
 underDiv.appendChild(h1);
 underDiv.appendChild(pa);
+
+// The Event
+
+let btn = document.querySelector('#btn');
+// btn.onclick = () => alert('Hello another world');
+
+// btn.addEventListener('click', () => {
+//     alert("Hello World!")
+// });
+
+btn.addEventListener('click', function (e) {
+    console.log(e);
+})
+
+
+let anonymousFunction = function(music, play) {
+    if (play) {
+        console.log('play ' + music);
+    }
+}
+
+
+const arrowFunctionn = () => {
+        console.log('This is arrow function');
+}
+
+console.log(arrowFunctionn);
+
+const notes = ['do', 're', 'me'];
+
+notes.forEach((note) => console.log(note));
+
+function myForEach(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i]);
+    }
+}
+
+const myArray = [2, 3, 4, 2];
+
+myForEach(myArray, item => console.log(item + 2));
+
+const btn1 = document.querySelector('#btn1');
+
+
+let btnn = document.querySelector('#btnn')
+function alertFunction() {
+    alert('Yeah, you did this')
+}
+
+btnn.onclick = alertFunction;
+btnn.addEventListener('click', alertFunction)
+
+let click = document.querySelector('#click');
+
+click.addEventListener('click', function(e) {
+    e.alert('This is e alert')
+});
+
+
