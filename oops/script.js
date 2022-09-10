@@ -111,30 +111,72 @@ console.log(obj);
 //}
 
 function Circle(radius) {
-    this.radius = radius;
-    this.draw = function () {
+     this.radius = radius;
+     this.defaultLocation = {x:0, y:1};
+     this.computeOptimumLocation = function() {
+        //..
+     }
+     this.draw = function () {
+        this.computeOptimumLocation();
         console.log('This is draw')
     }
 }
 
 const circle = new Circle(10);
-// dot notation to access the properties
+console.log(circle)
 
-circle.location = {x : 1}
 
-// bracket notation 
-// use bracket notation if you have any space and special character used in property name
-circle['coordinate-value'] = 10;
 
-// to delete any property in object
-delete circle.location;
-delete circle['coordinate-value'];
+// // dot notation to access the properties
 
-console.log(circle);
+// circle.location = {x : 1}
 
-//this is to print properties
-console.log("\" =>this is to print properties of objects\" ")
-for (let key in circle) {
-    console.log(key)
-}
+// // bracket notation 
+// // use bracket notation if you have any space and special character used in property name
+// circle['coordinate-value'] = 10;
+
+// // to delete any property in object
+// delete circle.location;
+// delete circle['coordinate-value'];
+
+// // console.log(circle);
+
+// /*
+// //this is to print properties
+// console.log("\" =>this is to print properties of objects\" ")
+// for (let key in circle) {
+//     console.log(key)
+// }
+// */
+
+// // this is to print 
+// // circle[key] => to get value of properties
+// /*
+// for (let key in circle) {
+//     if (typeof circle[key] !== 'function') {
+//         console.log(key, circle[key])
+//     }
+
+// }
+
+// */
+
+// // new object
+
+// function theObj(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// let myObj = new theObj('Vishal', 20);
+// myObj.class = 'batch2';
+
+// let theKeys = Object.keys(myObj)
+// console.log(theKeys)
+
+// for (key in myObj) {
+//     console.log(key, myObj[key])
+// }
+
+
 
